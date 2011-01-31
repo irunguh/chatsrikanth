@@ -1,0 +1,40 @@
+User:
+  actAs: [Timestampable,sfTrackable]
+  columns:
+    user_id:
+      type: integer(4)
+      notnull: true
+    user_name:
+      type: string(255)
+      notnull: true
+    is_online:
+      type: enum(1)
+      fixed: false
+      unsigned: false
+      values:
+        - Y
+        - N
+      default: Y
+      notnull: true
+    last_activity:
+      type: timestamp(25)
+      notnull: true
+Chat:
+  tableName: chat
+  columns:
+    from_user:
+      type: string(255)
+      notnull: true
+    to_user:
+      type: string(255)
+      notnull: true
+    message:
+      type: string
+      notnull: true
+    sent:
+      type: timestamp(25)
+      notnull: true
+    recd:
+      type: integer(4)
+      default: '0'
+      notnull: true
