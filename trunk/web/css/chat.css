@@ -1,0 +1,207 @@
+.filterform {
+	width:98%;
+}
+ .filterform input {
+	width:100%;
+
+}
+#chat_input {
+    color:#666666;
+}
+.chatbox {
+	position: fixed;
+	position:expression("absolute");
+	width: 225px;
+	display:none;
+}
+
+.chatboxhead {
+	background-color: #f99d39;
+	padding:7px;
+	color: #ffffff;
+
+	border-right:1px solid #f99d39;
+	border-left:1px solid #f99d39;
+}
+
+.chatboxblink {
+	background-color: #176689;
+	border-right:1px solid #176689;
+	border-left:1px solid #176689;
+}
+
+.chatboxcontent {
+	font-family: arial,sans-serif;
+	font-size: 13px;
+	color: #333333;
+	height:200px;
+	width:209px;
+	overflow-y:auto;
+	overflow-x:auto;
+	padding:7px;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #eeeeee;
+	background-color: #ffffff;
+	line-height: 1.3em;
+}
+
+.chatboxinput {
+	padding: 5px;
+	background-color: #ffffff;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+}
+
+.chatboxtextarea {
+	width: 206px;
+	height:44px;
+	padding:3px 0pt 3px 3px;
+	border: 1px solid #eeeeee;
+	margin: 1px;
+	overflow:hidden;
+}
+
+.chatboxtextareaselected {
+	border: 2px solid #f99d39;
+	margin:0;
+}
+
+.chatboxmessage {
+	margin-left:1em;
+}
+
+.chatboxinfo {
+	margin-left:-1em;
+	color:#666666;
+
+}
+
+.chatboxmessagefrom {
+	margin-left:-1em;
+	font-weight: bold;
+}
+
+.chatboxmessagecontent {
+}
+
+.chatboxoptions {
+	float: right;
+}
+
+.chatboxoptions a {
+	text-decoration: none;
+	color: white;
+	font-weight:bold;
+	font-family:Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+}
+
+.chatboxtitle {
+	float: left;
+}
+
+
+/* Chat Panel */
+.chatBase{
+    bottom:1px;
+    color:#B60E0E;
+    background-color:#005889;
+    border:1px solid #006400;
+    font-size:11px;
+    height:29px;
+    padding:0;
+    margin:0px auto;
+    position:fixed;
+    position:expression("fixed");
+    right:0;
+    width:10%;
+    z-index:99;    
+	background-image:url(chatBlockBg.gif);
+	background-repeat:repeat-x;
+}
+
+.chatString{
+    position:absolute;
+    bottom:7px;right:7px;
+    width: 10%;
+    float:right;
+    text-align:left;
+    padding-right:5px;
+    white-space:nowrap;
+    width:auto;
+    padding-right:5px;
+    white-space:nowrap;
+    padding:0 6px;
+    cursor: pointer;
+}
+.chatString .tab {
+   /* border:1px solid #E5E5E5;*/
+    display:block;
+    z-index:2;
+    padding:5px 5px 2px 0px;color:#fff;
+
+
+    }
+.chatUserActive { background:transparent url(chatUserActive.gif) no-repeat left top;}
+.chatUserInactive { background:transparent url(chatUserInactive.gif) no-repeat left top;}
+
+#friends {display:none;}
+.active #friends{
+    background:#FFFFFF none no-repeat scroll right bottom;border-color:#333333 #333333 black;border-style:solid;border-width:1px;cursor:auto;padding:0;width:190px;display:block;
+    position: absolute;bottom:23px;right:0px;z-index:1;
+
+}
+#friends span.head{display:block;padding:3px 5px;color:#fff;background:#005889 url(chBlockHdBg.gif) repeat-x left top;}
+#friends span.head a {float:right;font-weight:bold;color:#fff;text-decoration: none !important;}
+
+#friends .list ul, #friends .list li{
+    list-style:none;margin:2px 0px;padding:0px;position:relative;
+}
+#friends .list li a{padding:5px 5px 5px 10px;display:block;text-decoration: none !important;background-repeat:no-repeat;}
+#friends .list li:hover{background-color:#E5FEE5;}
+#friends .list li a.name {z-index:0;display:block;margin-right:25px;overflow:hidden;}
+#friends .list li a.action {width:16px;height:16px;position:absolute;z-index:99;right:2px;top:0px;}
+#friends .list li.visiable a.name{background-image:url(chatOnline.gif);background-position:2px 50%;padding-left: 20px;}
+#friends .list li.invisiable  a.name{background-image:url(chatOffline.gif);background-position:2px 50%;padding-left:20px;}
+#friends .list li a.block{background-image:url(blocked.png);background-position:50% 50%;cursor:pointer;}
+#friends .list li a.block:hover {background-image:url(unblocked.png);background-position:50% 50%;cursor:pointer;}
+#friends .list li a.unblock{background-image:url(unblocked.png);background-position:50% 50%;cursor:pointer;background-color:transparent;}
+#friends .list li a.unblock:hover {background-image:url(blocked.png);background-position:50% 50%;cursor:pointer;}
+.friend.visiable{}
+div.statusMessage{padding:10px;}
+span.visiable{background-image:url(statusVis.gif);background-position:2px 50%;padding-left:20px;background-repeat:no-repeat;cursor:pointer;}
+span.invisiable{background-image:url(statusInvis.gif);background-position:2px 50%;padding-left:20px;background-repeat:no-repeat;cursor:pointer;}
+.nofriendMessage{width:178px;border:0px dotted gray;white-space:normal;}
+.statuLblBlock {width:140px;height:20px;margin:2px 5px;border:0px none;display:block;position:relative}
+.statusLblField {width:114px;height:20px;color:#333;background:transparent url(statusFieldLbl.gif) no-repeat left top;text-indent:3px;text-align:left;padding-top:2px;float:left;overflow:hidden;}
+.statusLblBtn {width:26px;height:20px;background:transparent url(statusFieldLblBtn.gif) no-repeat left top;cursor:pointer;float:left;}
+.statusLblField a, .statusLblField a:hover {color:#333!important;padding:0px!important;line-height:normal!important;height:16px!important;margin:0px!important;background-color:transparent!important;cursor:text;}
+.statusLblField a.stLbl {color:#333!important;}
+.statusLblBtn input {border:0px none;background:none;}
+
+
+.chatBlLogo {float:left;padding:0px;margin:0px;padding-right:10px;background:url(chatBlLogo.gif) no-repeat left top;width:130px;height:25px;}
+.chStatus {padding-left:0px;color:#333;position:relative;}
+.chStatus a {color:#fff!important;line-height:25px;height:25px;}
+.chStatus a:hover {color:#eee;}
+.statusBlock {background-color:#f7f7f7;color:#666;border:1px solid #ccc;width:158px;padding:5px;margin:2px auto;position:absolute;left:-172px;z-index:100;top:15px;}
+.statusBlock textarea {border:2px solid #00B200;height:72px;overflow:auto;width:155px;}
+.statusBlock .statusMsg {font-size:10px;float:left;padding:2px;text-align:left;display:compact;width:153px;height:auto;}
+
+.clear {clear:both;}
+
+.statusVisBlock { background:#FFFFFF none no-repeat scroll right bottom;border-color:#333333 #333333 black;border-style:solid;border-width:1px;cursor:auto;display:block;padding:0;
+width:138px;position:absolute;left:5px;z-index:100;top:45px;}
+.statusVisBlock ul{list-style-image:none;list-style-position:outside;list-style-type:none;margin:2px 0;padding:0;position:relative;}
+.statusVisBlock ul li {color:#333333;padding-left:00px;}
+.statusVisBlock ul li a:hover {background-color:#CCCCCC;}
+.statusVisBlock ul li a.statusVisible {background-image:url(chatOnline.gif);background-position:2px 50%;padding:5px 5px 5px 20px!important;background-repeat:no-repeat;
+display:block;text-decoration:none !important;}
+.statusVisBlock ul li a.statusInvisible {background-image:url(chatOffline.gif);background-position:2px 50%;padding:5px 5px 5px 20px!important;background-repeat:no-repeat;
+display:block;text-decoration:none !important;}
+.statusVisBlock ul li a.statusBusy {background-image:url(chatBusy.gif);background-position:2px 50%;padding:5px 5px 5px 20px!important;background-repeat:no-repeat;
+display:block;text-decoration:none !important;}
+
+#friends .list {overflow:auto;height:auto;max-height:200px;position:relative;}
+#friends .list ul {position:relative;min-height:30px;}
